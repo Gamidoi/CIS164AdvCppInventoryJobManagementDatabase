@@ -25,6 +25,11 @@ bool testMySQLConnection() {
 		stmt->execute(
 			"INSERT into Item (itemName, itemDescription, itemValue, itemQuantity, isRawResource) VALUES ('nails', 'basic iron nails', 0.01, 300, true)"
 			);
+
+		// memory management, both stmt, and con are heaped, not stacked, and must be deleted.
+		delete stmt;
+		delete con;
+
 		return true;
 
 	} catch (sql::SQLException &e) {
