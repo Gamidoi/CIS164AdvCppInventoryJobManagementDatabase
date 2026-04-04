@@ -4,6 +4,8 @@ project(FinalProjectCIS164InventoryJobManagementDatabase)
 set(CMAKE_CXX_STANDARD 20)
 add_executable(FinalProjectCIS164InventoryJobManagementDatabase
         main.cpp
+        objects/Item.cpp
+        objects/Item.h
 )
 
 target_include_directories(
