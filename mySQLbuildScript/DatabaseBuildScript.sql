@@ -17,7 +17,7 @@ create table Item(
     itemDescription varchar(150),
     itemValue double,
     itemQuantity int,
-    isRawResource boolean
+    resourceCode int
 );
 
 create table Customer(

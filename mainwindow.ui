@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QWidget" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1317</width>
+    <height>841</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QTabWidget" name="Tabs">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>0</y>
+     <width>1291</width>
+     <height>831</height>
+    </rect>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <widget class="QWidget" name="ViewItems">
+    <attribute name="title">
+     <string>View Items</string>
+    </attribute>
+    <widget class="QTableView" name="ItemTableView">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>1281</width>
+       <height>801</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="CreateItems">
+    <attribute name="title">
+     <string>Create Item</string>
+    </attribute>
+    <widget class="QLineEdit" name="itemName">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>40</y>
+       <width>231</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="ItemDescription">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>80</y>
+       <width>231</width>
+       <height>91</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>40</y>
+       <width>91</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Item Name</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>90</y>
+       <width>101</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Item Description</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>180</y>
+       <width>91</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Item Value</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="ItemValue">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>180</y>
+       <width>231</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>220</y>
+       <width>91</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Item Quantity</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="ItemQuantity">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>220</y>
+       <width>231</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_5">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>260</y>
+       <width>121</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Item Category</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="itemIsRaw">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>260</y>
+       <width>231</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string> 0 Raw Resource</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1 Intermediate Product</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2 Finished Product</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QPushButton" name="SubmitNewItem">
+     <property name="geometry">
+      <rect>
+       <x>500</x>
+       <y>705</y>
+       <width>291</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Submit New Item</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="ConfirmationOfNewItemTextBox">
+     <property name="geometry">
+      <rect>
+       <x>440</x>
+       <y>525</y>
+       <width>411</width>
+       <height>131</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>default text</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignmentFlag::AlignCenter</set>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>itemName</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>SetNewItemDetails()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>414</x>
+     <y>83</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1304</x>
+     <y>47</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ItemDescription</sender>
+   <signal>textChanged()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>SetNewItemDetails()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>446</x>
+     <y>145</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1309</x>
+     <y>81</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ItemValue</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>SetNewItemDetails()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>460</x>
+     <y>220</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1309</x>
+     <y>108</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ItemQuantity</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>SetNewItemDetails()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>390</x>
+     <y>257</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1309</x>
+     <y>135</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>itemIsRaw</sender>
+   <signal>currentTextChanged(QString)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>SetNewItemDetails()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>427</x>
+     <y>296</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1309</x>
+     <y>168</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>SubmitNewItem</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>SubmitNewItemToDatabase()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>711</x>
+     <y>760</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1307</x>
+     <y>634</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>SetNewItemDetails()</slot>
+  <slot>SubmitNewItemToDatabase()</slot>
+  <slot>PopulateViewItemsTable()</slot>
+ </slots>
+</ui>
