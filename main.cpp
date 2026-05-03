@@ -4,12 +4,7 @@
 
 
 using namespace std;
-#include <QSqlDatabase>
-#include <QSqlQuery>
-#include <QSqlError>
 #include <QApplication>
-#include <QDebug>
-#include <iostream>
 
 
 

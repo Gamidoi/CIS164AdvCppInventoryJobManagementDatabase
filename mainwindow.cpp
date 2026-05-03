@@ -14,7 +14,13 @@ MainWindow::MainWindow(shared_ptr<sqlConnection> database, QWidget *parent) : QW
 	this->database = database;
 	newItem = Item();
 	this->viewItems = make_shared<QSqlTableModel>(this, database->getDatabase());
+	this->viewCustomers = make_shared<QSqlTableModel>(this, database->getDatabase());
+	this->viewJobs = make_shared<QSqlQueryModel>();
+	this->viewWorkOrders = make_shared<QSqlQueryModel>();
 	PopulateViewItemsTable();
+	PopulateViewCustomersTable();
+	PopulateViewJobsTable();
+	PopulateViewWorkOrdersTable();
 }
 
 MainWindow::~MainWindow() {
@@ -94,4 +100,38 @@ void MainWindow::PopulateViewItemsTable() {
 
 	viewItems->select();
 	ui->ItemTableView->setModel(viewItems.get());
+}
+
+void MainWindow::setNewCustomerDetails(){};
+void MainWindow::submitNewCustomerToDatabase(){}
+void MainWindow::PopulateViewCustomersTable() {
+	viewCustomers->setTable("Customer");
+	viewCustomers->setHeaderData(0, Qt::Horizontal, "Customer Name");
+	viewCustomers->setHeaderData(1, Qt::Horizontal, "Customer Address");
+	viewCustomers->setHeaderData(2, Qt::Horizontal, "Customer Phone");
+
+	viewCustomers->select();
+	ui->CustomersTableView->setModel(viewCustomers.get());
+}
+void MainWindow::setNewJobDetails(){}
+void MainWindow::submitNewJobToDatabase(){}
+
+void MainWindow::PopulateViewJobsTable() {
+	viewJobs->setQuery("(select jobID, customerName, customerAddress, customerPhone from Job join Customer on Job.jobCustomer = Customer.customerID)");
+	viewJobs->setHeaderData(0, Qt::Horizontal, "Job Number");
+	viewJobs->setHeaderData(1, Qt::Horizontal, "Customer Name");
+	viewJobs->setHeaderData(2, Qt::Horizontal, "Customer Address");
+	viewJobs->setHeaderData(3, Qt::Horizontal, "Customer Phone");
+
+	ui->JobsTableView->setModel(viewJobs.get());
+}
+void MainWindow::PopulateViewWorkOrdersTable() {
+	viewWorkOrders->setQuery("select workOrderJobNumber, workOrderID, workOrderItemQuantity, itemName, itemID from WorkOrder join Item on WorkOrder.workOrderOrderedItem = Item.itemID");
+	viewWorkOrders->setHeaderData(0, Qt::Horizontal, "Job Number");
+	viewWorkOrders->setHeaderData(1, Qt::Horizontal, "Work Order");
+	viewWorkOrders->setHeaderData(2, Qt::Horizontal, "Quantity");
+	viewWorkOrders->setHeaderData(3, Qt::Horizontal, "Item Name");
+	viewWorkOrders->setHeaderData(4, Qt::Horizontal, "Item ID");
+
+	ui->WorkOrdersTableView->setModel(viewWorkOrders.get());
 }

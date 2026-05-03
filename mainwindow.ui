@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1317</width>
-    <height>841</height>
+    <width>1491</width>
+    <height>838</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -204,6 +204,603 @@
      </property>
     </widget>
    </widget>
+   <widget class="QWidget" name="ViewCustomers">
+    <attribute name="title">
+     <string>Customers</string>
+    </attribute>
+    <widget class="QTableView" name="CustomersTableView">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>1281</width>
+       <height>801</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="AddCustomers">
+    <attribute name="title">
+     <string>Add Customer</string>
+    </attribute>
+    <widget class="QLineEdit" name="cusotmerPhoneNumber">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>240</y>
+       <width>231</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_6">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>240</y>
+       <width>91</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Phone Number</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="ConfirmationOfNewCustomerTextBox">
+     <property name="geometry">
+      <rect>
+       <x>410</x>
+       <y>480</y>
+       <width>411</width>
+       <height>131</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>default text</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignmentFlag::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="SubmitNewCustomer">
+     <property name="geometry">
+      <rect>
+       <x>470</x>
+       <y>660</y>
+       <width>291</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Submit New Item</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_7">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>100</y>
+       <width>91</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Customer name</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="CustomerName">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>100</y>
+       <width>231</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_8">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>140</y>
+       <width>91</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Phone Number</string>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="CustomerAddress">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>140</y>
+       <width>231</width>
+       <height>91</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="ViewJobs">
+    <attribute name="title">
+     <string>Jobs</string>
+    </attribute>
+    <widget class="QTableView" name="JobsTableView">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>1281</width>
+       <height>801</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="AddJobs">
+    <attribute name="title">
+     <string>Add Jobs</string>
+    </attribute>
+    <widget class="QLabel" name="label_9">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>90</y>
+       <width>101</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>1). Item ID number</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="ConfirmationOfNewJobTextBox">
+     <property name="geometry">
+      <rect>
+       <x>410</x>
+       <y>520</y>
+       <width>411</width>
+       <height>131</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>default text</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignmentFlag::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="CustomerID">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>40</y>
+       <width>231</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="SubmitNewJob">
+     <property name="geometry">
+      <rect>
+       <x>470</x>
+       <y>700</y>
+       <width>291</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Submit New Item</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_11">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>40</y>
+       <width>91</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Customer ID</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="jobItem1">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>80</y>
+       <width>231</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="jobItemQuantity1">
+     <property name="geometry">
+      <rect>
+       <x>590</x>
+       <y>80</y>
+       <width>231</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_10">
+     <property name="geometry">
+      <rect>
+       <x>480</x>
+       <y>90</y>
+       <width>91</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Item Quantity</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_12">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>130</y>
+       <width>101</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>2). Item ID number</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="jobItem2">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>120</y>
+       <width>231</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_13">
+     <property name="geometry">
+      <rect>
+       <x>480</x>
+       <y>130</y>
+       <width>91</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Item Quantity</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="jobItemQuantity2">
+     <property name="geometry">
+      <rect>
+       <x>590</x>
+       <y>120</y>
+       <width>231</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_14">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>170</y>
+       <width>101</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>3). Item ID number</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="jobItem3">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>160</y>
+       <width>231</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_15">
+     <property name="geometry">
+      <rect>
+       <x>480</x>
+       <y>170</y>
+       <width>91</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Item Quantity</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="jobItemQuantity3">
+     <property name="geometry">
+      <rect>
+       <x>590</x>
+       <y>160</y>
+       <width>231</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_16">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>210</y>
+       <width>101</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>4). Item ID number</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="jobItem4">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>200</y>
+       <width>231</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_17">
+     <property name="geometry">
+      <rect>
+       <x>480</x>
+       <y>210</y>
+       <width>91</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Item Quantity</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="jobItemQuantity4">
+     <property name="geometry">
+      <rect>
+       <x>590</x>
+       <y>200</y>
+       <width>231</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_18">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>250</y>
+       <width>101</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>5). Item ID number</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="jobItem5">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>240</y>
+       <width>231</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_19">
+     <property name="geometry">
+      <rect>
+       <x>480</x>
+       <y>250</y>
+       <width>91</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Item Quantity</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="jobItemQuantity5">
+     <property name="geometry">
+      <rect>
+       <x>590</x>
+       <y>240</y>
+       <width>231</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_20">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>290</y>
+       <width>101</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>6). Item ID number</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="jobItem6">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>280</y>
+       <width>231</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_21">
+     <property name="geometry">
+      <rect>
+       <x>480</x>
+       <y>290</y>
+       <width>91</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Item Quantity</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="jobItemQuantity6">
+     <property name="geometry">
+      <rect>
+       <x>590</x>
+       <y>280</y>
+       <width>231</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="jobItemQuantity7">
+     <property name="geometry">
+      <rect>
+       <x>590</x>
+       <y>320</y>
+       <width>231</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_22">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>330</y>
+       <width>101</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>7). Item ID number</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="jobItem7">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>320</y>
+       <width>231</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_23">
+     <property name="geometry">
+      <rect>
+       <x>480</x>
+       <y>330</y>
+       <width>91</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Item Quantity</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_24">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>370</y>
+       <width>101</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>8). Item ID number</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="jobItem8">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>360</y>
+       <width>231</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_25">
+     <property name="geometry">
+      <rect>
+       <x>480</x>
+       <y>370</y>
+       <width>91</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Item Quantity</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="jobItemQuantity8">
+     <property name="geometry">
+      <rect>
+       <x>590</x>
+       <y>360</y>
+       <width>231</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="ViewWorkOrders">
+    <attribute name="title">
+     <string>Work Orders</string>
+    </attribute>
+    <widget class="QTableView" name="WorkOrdersTableView">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>1281</width>
+       <height>801</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
   </widget>
  </widget>
  <resources/>
@@ -304,10 +901,366 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>CustomerName</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>setNewCustomerDetails()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>392</x>
+     <y>138</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1348</x>
+     <y>152</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CustomerAddress</sender>
+   <signal>textChanged()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>setNewCustomerDetails()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>423</x>
+     <y>209</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1344</x>
+     <y>193</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cusotmerPhoneNumber</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>setNewCustomerDetails()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>402</x>
+     <y>280</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1344</x>
+     <y>237</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>SubmitNewCustomer</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>submitNewCustomerToDatabase()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>713</x>
+     <y>719</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1319</x>
+     <y>616</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CustomerID</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>setNewJobDetails()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>424</x>
+     <y>83</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1344</x>
+     <y>33</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>jobItem1</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>setNewJobDetails()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>350</x>
+     <y>118</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1366</x>
+     <y>57</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>jobItemQuantity1</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>setNewJobDetails()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>692</x>
+     <y>123</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1423</x>
+     <y>76</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>jobItem2</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>setNewJobDetails()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>446</x>
+     <y>146</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1324</x>
+     <y>97</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>jobItemQuantity2</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>setNewJobDetails()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>810</x>
+     <y>156</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1427</x>
+     <y>116</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>jobItem3</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>setNewJobDetails()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>400</x>
+     <y>191</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1343</x>
+     <y>124</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>jobItemQuantity3</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>setNewJobDetails()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>767</x>
+     <y>195</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1447</x>
+     <y>141</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>jobItem4</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>setNewJobDetails()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>435</x>
+     <y>244</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1331</x>
+     <y>158</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>jobItemQuantity4</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>setNewJobDetails()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>792</x>
+     <y>239</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1394</x>
+     <y>181</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>jobItem5</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>setNewJobDetails()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>458</x>
+     <y>273</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1456</x>
+     <y>204</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>jobItemQuantity5</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>setNewJobDetails()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>685</x>
+     <y>274</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1412</x>
+     <y>219</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>jobItem6</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>setNewJobDetails()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>442</x>
+     <y>324</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1347</x>
+     <y>223</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>jobItemQuantity6</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>setNewJobDetails()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>806</x>
+     <y>318</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1461</x>
+     <y>250</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>jobItem7</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>setNewJobDetails()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>446</x>
+     <y>356</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1377</x>
+     <y>267</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>jobItemQuantity7</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>setNewJobDetails()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>754</x>
+     <y>352</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1434</x>
+     <y>289</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>jobItem8</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>setNewJobDetails()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>462</x>
+     <y>397</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1354</x>
+     <y>309</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>jobItemQuantity8</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>setNewJobDetails()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>793</x>
+     <y>404</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1427</x>
+     <y>337</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>SubmitNewJob</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>submitNewJobToDatabase()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>688</x>
+     <y>747</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1376</x>
+     <y>497</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>SetNewItemDetails()</slot>
   <slot>SubmitNewItemToDatabase()</slot>
   <slot>PopulateViewItemsTable()</slot>
+  <slot>setNewCustomerDetails()</slot>
+  <slot>submitNewCustomerToDatabase()</slot>
+  <slot>setNewJobDetails()</slot>
+  <slot>submitNewJobToDatabase()</slot>
  </slots>
 </ui>

@@ -7,17 +7,15 @@
 sqlConnection::sqlConnection(string& userName, string& password) {
 	database = QSqlDatabase::addDatabase("QODBC");
 
-	// Build a connection string for MySQL via ODBC
 	QString connectionString = QString(
 		"DRIVER={MySQL ODBC 9.6 Unicode Driver};"
-		"SERVER=50.80.0.128:3306;"
+		"SERVER=localhost:3306;"
 		"DATABASE=inventoryManagement;"
 		"UID=%1;"
 		"PWD=%2;"
 		"OPTION=3;"
 	).arg(QString::fromStdString(userName), QString::fromStdString(password));
 
-	// 3. For ODBC, the string goes in setDatabaseName
 	database.setDatabaseName(connectionString);
 	if (!database.open()) {
 		qDebug() << "Database Error:" << database.lastError().text();

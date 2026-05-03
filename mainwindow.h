@@ -8,6 +8,7 @@
 #include <QWidget>
 #include <QSqlTableModel>
 
+#include "objects/Customer.h"
 #include "objects/Item.h"
 #include "util/sqlConnection.h"
 
@@ -32,11 +33,22 @@ private slots:
 	void SetNewItemDetails();
 	void SubmitNewItemToDatabase();
 	void PopulateViewItemsTable();
+	void setNewCustomerDetails();
+	void submitNewCustomerToDatabase();
+	void PopulateViewCustomersTable();
+	void setNewJobDetails();
+	void submitNewJobToDatabase();
+	void PopulateViewJobsTable();
+	void PopulateViewWorkOrdersTable();
 private:
 	Ui::MainWindow *ui;
 	shared_ptr<sqlConnection> database;
 	shared_ptr<QSqlTableModel> viewItems;
+	shared_ptr<QSqlTableModel> viewCustomers;
+	shared_ptr<QSqlQueryModel> viewJobs;
+	shared_ptr<QSqlQueryModel> viewWorkOrders;
 	Item newItem;
+	Customer newCustomer;
 };
 
 
