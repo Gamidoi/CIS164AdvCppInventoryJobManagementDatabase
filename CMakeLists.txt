@@ -25,6 +25,10 @@ add_executable(FinalProjectCIS164InventoryJobManagementDatabase
         mainwindow.ui
         objects/Customer.cpp
         objects/Customer.h
+        objects/Job.cpp
+        objects/Job.h
+        objects/Recipe.cpp
+        objects/Recipe.h
 )
 
 target_link_libraries(

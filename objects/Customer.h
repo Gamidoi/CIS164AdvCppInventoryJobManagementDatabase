@@ -15,6 +15,7 @@ private:
 public:
 	Customer(){customerName = ""; customerAddress = ""; customerPhone = "";}
 	Customer(string customerName, string customerAddress, string customerPhone);
+	string getSQLInsert();
 
 	string getName() const {return customerName;}
 	string getAddress() const {return customerAddress;}

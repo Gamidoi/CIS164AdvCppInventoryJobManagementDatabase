@@ -17,10 +17,12 @@ MainWindow::MainWindow(shared_ptr<sqlConnection> database, QWidget *parent) : QW
 	this->viewCustomers = make_shared<QSqlTableModel>(this, database->getDatabase());
 	this->viewJobs = make_shared<QSqlQueryModel>();
 	this->viewWorkOrders = make_shared<QSqlQueryModel>();
+	this->viewRecipes = make_shared<QSqlQueryModel>();
 	PopulateViewItemsTable();
 	PopulateViewCustomersTable();
 	PopulateViewJobsTable();
 	PopulateViewWorkOrdersTable();
+	PopulateViewRecipesTable();
 }
 
 MainWindow::~MainWindow() {
@@ -134,4 +136,18 @@ void MainWindow::PopulateViewWorkOrdersTable() {
 	viewWorkOrders->setHeaderData(4, Qt::Horizontal, "Item ID");
 
 	ui->WorkOrdersTableView->setModel(viewWorkOrders.get());
+}
+void MainWindow::setNewRecipeDetails(){}
+void MainWindow::submitNewRecipeToDatabase(){}
+void MainWindow::PopulateViewRecipesTable() {
+	QString query = "select product.itemID, product.itemName, component.itemName, ItemComponentItems.componentPerItemRatio from ItemComponentItems ";
+	query += "join Item as product on ItemComponentItems.itemID = product.itemID ";
+	query += "join Item as component on ItemComponentItems.component = component.itemID";
+	viewRecipes->setQuery(query);
+	viewRecipes->setHeaderData(0, Qt::Horizontal, "Product ID");
+	viewRecipes->setHeaderData(1, Qt::Horizontal, "Product Name");
+	viewRecipes->setHeaderData(2, Qt::Horizontal, "Component Name");
+	viewRecipes->setHeaderData(3, Qt::Horizontal, "Component per Product Ratio");
+
+	ui->RecipeTableView->setModel(viewRecipes.get());
 }

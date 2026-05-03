@@ -40,6 +40,9 @@ private slots:
 	void submitNewJobToDatabase();
 	void PopulateViewJobsTable();
 	void PopulateViewWorkOrdersTable();
+	void setNewRecipeDetails();
+	void submitNewRecipeToDatabase();
+	void PopulateViewRecipesTable();
 private:
 	Ui::MainWindow *ui;
 	shared_ptr<sqlConnection> database;
@@ -47,6 +50,7 @@ private:
 	shared_ptr<QSqlTableModel> viewCustomers;
 	shared_ptr<QSqlQueryModel> viewJobs;
 	shared_ptr<QSqlQueryModel> viewWorkOrders;
+	shared_ptr<QSqlQueryModel> viewRecipes;
 	Item newItem;
 	Customer newCustomer;
 };

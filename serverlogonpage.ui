@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>451</width>
-    <height>265</height>
+    <width>467</width>
+    <height>270</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -136,6 +136,22 @@
     <hint type="destinationlabel">
      <x>146</x>
      <y>144</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ServerPassword</sender>
+   <signal>returnPressed()</signal>
+   <receiver>ServerLogOnPage</receiver>
+   <slot>AttemptLogOn()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>342</x>
+     <y>114</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>385</x>
+     <y>235</y>
     </hint>
    </hints>
   </connection>
