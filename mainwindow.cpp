@@ -66,7 +66,6 @@ void MainWindow::SetNewItemDetails(){
 	try {newItem.setItemQuantity(ui->ItemQuantity->text().toInt());} catch (...){newItem.setItemQuantity(0);}
 	try {newItem.setIsRawResource(ui->itemIsRaw->currentIndex());} catch (...){newItem.setIsRawResource(0);}
 }
-
 bool checkItemHasIncompleteData(Item newItem) {
 	if (newItem.getItemName().empty() || newItem.getItemDescription().empty()) {
 		return true;
@@ -79,10 +78,9 @@ bool checkItemHasIncompleteData(Item newItem) {
 	}
 	return false;
 }
-
 void MainWindow::SubmitNewItemToDatabase() {
 	if (checkItemHasIncompleteData(newItem)) {
-		ui->ConfirmationOfNewItemTextBox->setText(("The Item contains invalid characters, has incomplete data, or has negative values for Value, or Quantity."));
+		ui->ConfirmationOfNewItemTextBox->setText(("The Item contains invalid characters, has incomplete data,\n or has negative values for Value, or Quantity."));
 		return;
 	}
 	string confirmationMessage = "";
@@ -90,7 +88,6 @@ void MainWindow::SubmitNewItemToDatabase() {
 	ui->ConfirmationOfNewItemTextBox->setText(confirmationMessage.data());
 	viewItems->select();
 }
-
 void MainWindow::PopulateViewItemsTable() {
 	viewItems->setTable("Item");
 	viewItems->setHeaderData(0, Qt::Horizontal, "Item Number");
@@ -104,17 +101,71 @@ void MainWindow::PopulateViewItemsTable() {
 	ui->ItemTableView->setModel(viewItems.get());
 }
 
-void MainWindow::setNewCustomerDetails(){};
-void MainWindow::submitNewCustomerToDatabase(){}
+void MainWindow::setNewCustomerDetails(){
+	try {
+		string CustomerName = ui->CustomerName->text().toStdString();
+		if (checkStringHasDangeousChars(CustomerName)){
+			ui->ConfirmationOfNewCustomerTextBox->setText(("Invalid Customer Name, cannot include characters: \"" + DANGEROUSCHARS + "\"").data());
+			throw runtime_error("");
+		}
+		newCustomer.setName(CustomerName);
+	} catch (...) {
+		newCustomer.setName("");
+	}
+	try {
+		string CustomerAddress = ui->CustomerAddress->toPlainText().toStdString();
+		if (checkStringHasDangeousChars(CustomerAddress)){
+			ui->ConfirmationOfNewCustomerTextBox->setText(("Invalid Customer Address, cannot include characters: \"" + DANGEROUSCHARS + "\"").data());
+			throw runtime_error("");
+		}
+		newCustomer.setAddress(CustomerAddress);
+	} catch (...) {
+		newCustomer.setAddress("");
+	}
+	try {
+		string CustomerPhone = ui->CustomerPhone->text().toStdString();
+		if (checkStringHasDangeousChars(CustomerPhone)){
+			ui->ConfirmationOfNewCustomerTextBox->setText(("Invalid Customer Phone, cannot include characters: \"" + DANGEROUSCHARS + "\"").data());
+			throw runtime_error("");
+		}
+		newCustomer.setPhone(CustomerPhone);
+	} catch (...) {
+		newCustomer.setPhone("");
+	}
+}
+bool checkCustomerHasIncompleteData(Customer newCustomer) {
+	if (newCustomer.getName().empty() || checkStringHasDangeousChars(newCustomer.getName())) {
+		return true;
+	}
+	if (newCustomer.getAddress().empty() || checkStringHasDangeousChars(newCustomer.getAddress())) {
+		return true;
+	}
+	if (newCustomer.getPhone().empty() || checkStringHasDangeousChars(newCustomer.getPhone())) {
+		return true;
+	}
+	return false;
+}
+void MainWindow::submitNewCustomerToDatabase() {
+	if (checkCustomerHasIncompleteData(newCustomer)) {
+		ui->ConfirmationOfNewCustomerTextBox->setText(("The Customer contains invalid characters, or has incomplete data"));
+		return;
+	}
+	string confirmationMessage = "";
+	confirmationMessage = database->insertCustomer(newCustomer);
+	ui->ConfirmationOfNewCustomerTextBox->setText(confirmationMessage.data());
+	viewCustomers->select();
+}
 void MainWindow::PopulateViewCustomersTable() {
 	viewCustomers->setTable("Customer");
-	viewCustomers->setHeaderData(0, Qt::Horizontal, "Customer Name");
-	viewCustomers->setHeaderData(1, Qt::Horizontal, "Customer Address");
-	viewCustomers->setHeaderData(2, Qt::Horizontal, "Customer Phone");
+	viewCustomers->setHeaderData(1, Qt::Horizontal, "Customer ID");
+	viewCustomers->setHeaderData(1, Qt::Horizontal, "Customer Name");
+	viewCustomers->setHeaderData(2, Qt::Horizontal, "Customer Address");
+	viewCustomers->setHeaderData(3, Qt::Horizontal, "Customer Phone");
 
 	viewCustomers->select();
 	ui->CustomersTableView->setModel(viewCustomers.get());
 }
+
 void MainWindow::setNewJobDetails(){}
 void MainWindow::submitNewJobToDatabase(){}
 

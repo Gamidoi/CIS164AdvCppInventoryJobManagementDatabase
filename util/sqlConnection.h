@@ -10,6 +10,7 @@
 #include <QString>
 #include <iostream>
 #include "../objects/Item.h"
+#include "../objects/Customer.h"
 using namespace std;
 
 
@@ -25,6 +26,7 @@ public:
 		return database.open();
 	}
 	string insertItem(Item newItem);
+	string insertCustomer(Customer newCustomer);
 };
 
 

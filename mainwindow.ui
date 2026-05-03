@@ -23,7 +23,7 @@
     </rect>
    </property>
    <property name="currentIndex">
-    <number>8</number>
+    <number>3</number>
    </property>
    <widget class="QWidget" name="ViewItems">
     <attribute name="title">
@@ -223,7 +223,7 @@
     <attribute name="title">
      <string>Add Customer</string>
     </attribute>
-    <widget class="QLineEdit" name="cusotmerPhoneNumber">
+    <widget class="QLineEdit" name="CustomerPhone">
      <property name="geometry">
       <rect>
        <x>230</x>
@@ -303,12 +303,12 @@
       <rect>
        <x>120</x>
        <y>140</y>
-       <width>91</width>
+       <width>101</width>
        <height>16</height>
       </rect>
      </property>
      <property name="text">
-      <string>Phone Number</string>
+      <string>Customer Address</string>
      </property>
     </widget>
     <widget class="QTextEdit" name="CustomerAddress">
@@ -1421,7 +1421,7 @@
    </hints>
   </connection>
   <connection>
-   <sender>cusotmerPhoneNumber</sender>
+   <sender>CustomerPhone</sender>
    <signal>textEdited(QString)</signal>
    <receiver>MainWindow</receiver>
    <slot>setNewCustomerDetails()</slot>

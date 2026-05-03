@@ -34,3 +34,14 @@ string sqlConnection::insertItem(Item newItem) {
 		return e.what();
 	}
 }
+
+string sqlConnection::insertCustomer(Customer newCustomer) {
+	try {
+		QSqlQuery query(database);
+		query.exec(newCustomer.getSQLInsert().data());
+		return "Customer \"" + newCustomer.getName() + "\" has been added.";
+	} catch (exception &e) {
+		cout << e.what() << endl;
+		return e.what();
+	}
+}
