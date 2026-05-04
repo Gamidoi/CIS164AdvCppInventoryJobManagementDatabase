@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1314</width>
+    <width>1624</width>
     <height>1038</height>
    </rect>
   </property>
@@ -23,7 +23,7 @@
     </rect>
    </property>
    <property name="currentIndex">
-    <number>3</number>
+    <number>5</number>
    </property>
    <widget class="QWidget" name="ViewItems">
     <attribute name="title">
@@ -177,8 +177,8 @@
     <widget class="QPushButton" name="SubmitNewItem">
      <property name="geometry">
       <rect>
-       <x>500</x>
-       <y>705</y>
+       <x>170</x>
+       <y>540</y>
        <width>291</width>
        <height>61</height>
       </rect>
@@ -190,8 +190,8 @@
     <widget class="QLabel" name="ConfirmationOfNewItemTextBox">
      <property name="geometry">
       <rect>
-       <x>440</x>
-       <y>525</y>
+       <x>110</x>
+       <y>400</y>
        <width>411</width>
        <height>131</height>
       </rect>
@@ -201,6 +201,58 @@
      </property>
      <property name="alignment">
       <set>Qt::AlignmentFlag::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="itemNumber">
+     <property name="geometry">
+      <rect>
+       <x>1010</x>
+       <y>70</y>
+       <width>231</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_44">
+     <property name="geometry">
+      <rect>
+       <x>900</x>
+       <y>70</y>
+       <width>91</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Item Number</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="ConfirmationOfEditedItemTextBox">
+     <property name="geometry">
+      <rect>
+       <x>860</x>
+       <y>110</y>
+       <width>411</width>
+       <height>131</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>default text</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignmentFlag::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="SubmitUpdateItem">
+     <property name="geometry">
+      <rect>
+       <x>920</x>
+       <y>250</y>
+       <width>291</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Edit Item</string>
      </property>
     </widget>
    </widget>
@@ -249,8 +301,8 @@
     <widget class="QLabel" name="ConfirmationOfNewCustomerTextBox">
      <property name="geometry">
       <rect>
-       <x>410</x>
-       <y>480</y>
+       <x>110</x>
+       <y>400</y>
        <width>411</width>
        <height>131</height>
       </rect>
@@ -265,8 +317,8 @@
     <widget class="QPushButton" name="SubmitNewCustomer">
      <property name="geometry">
       <rect>
-       <x>470</x>
-       <y>660</y>
+       <x>170</x>
+       <y>540</y>
        <width>291</width>
        <height>61</height>
       </rect>
@@ -321,6 +373,58 @@
       </rect>
      </property>
     </widget>
+    <widget class="QLabel" name="ConfirmationOfUpdateCustomerTextBox">
+     <property name="geometry">
+      <rect>
+       <x>860</x>
+       <y>110</y>
+       <width>411</width>
+       <height>131</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>default text</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignmentFlag::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="SubmitUpdateCustomer">
+     <property name="geometry">
+      <rect>
+       <x>920</x>
+       <y>250</y>
+       <width>291</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Update Customer Information</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_45">
+     <property name="geometry">
+      <rect>
+       <x>900</x>
+       <y>70</y>
+       <width>91</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Customer ID</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="UpdateCustomerID">
+     <property name="geometry">
+      <rect>
+       <x>1010</x>
+       <y>70</y>
+       <width>231</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
    </widget>
    <widget class="QWidget" name="ViewJobs">
     <attribute name="title">
@@ -357,8 +461,8 @@
     <widget class="QLabel" name="ConfirmationOfNewJobTextBox">
      <property name="geometry">
       <rect>
-       <x>410</x>
-       <y>520</y>
+       <x>110</x>
+       <y>400</y>
        <width>411</width>
        <height>131</height>
       </rect>
@@ -383,8 +487,8 @@
     <widget class="QPushButton" name="SubmitNewJob">
      <property name="geometry">
       <rect>
-       <x>470</x>
-       <y>700</y>
+       <x>170</x>
+       <y>540</y>
        <width>291</width>
        <height>61</height>
       </rect>
@@ -785,6 +889,110 @@
       <string/>
      </property>
     </widget>
+    <widget class="QLabel" name="label_46">
+     <property name="geometry">
+      <rect>
+       <x>900</x>
+       <y>70</y>
+       <width>91</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Job Number</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="ConfirmationOfUpdateJobTextBox">
+     <property name="geometry">
+      <rect>
+       <x>860</x>
+       <y>110</y>
+       <width>411</width>
+       <height>131</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>default text</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignmentFlag::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="UpdateJobNumber">
+     <property name="geometry">
+      <rect>
+       <x>1010</x>
+       <y>70</y>
+       <width>231</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="SubmitUpdateJob">
+     <property name="geometry">
+      <rect>
+       <x>920</x>
+       <y>250</y>
+       <width>291</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Update Job / Add to Job</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_47">
+     <property name="geometry">
+      <rect>
+       <x>900</x>
+       <y>360</y>
+       <width>91</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Work Order </string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="SubmitDeleteWorkOrder">
+     <property name="geometry">
+      <rect>
+       <x>920</x>
+       <y>540</y>
+       <width>291</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Delete Work Order</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="ConfirmationOfDeleteWorkOrderTextBox">
+     <property name="geometry">
+      <rect>
+       <x>860</x>
+       <y>400</y>
+       <width>411</width>
+       <height>131</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>default text</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignmentFlag::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="deleteWorkOrderNumber">
+     <property name="geometry">
+      <rect>
+       <x>1010</x>
+       <y>360</y>
+       <width>231</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
    </widget>
    <widget class="QWidget" name="ViewWorkOrders">
     <attribute name="title">
@@ -849,8 +1057,8 @@
     <widget class="QLabel" name="ConfirmationOfNewRecipeTextBox">
      <property name="geometry">
       <rect>
-       <x>410</x>
-       <y>520</y>
+       <x>110</x>
+       <y>400</y>
        <width>411</width>
        <height>131</height>
       </rect>
@@ -885,8 +1093,8 @@
     <widget class="QPushButton" name="SubmitNewRecipe">
      <property name="geometry">
       <rect>
-       <x>470</x>
-       <y>700</y>
+       <x>170</x>
+       <y>540</y>
        <width>291</width>
        <height>61</height>
       </rect>
@@ -1277,6 +1485,64 @@
       </rect>
      </property>
     </widget>
+    <widget class="QPushButton" name="SubmitDeleteRecipe">
+     <property name="geometry">
+      <rect>
+       <x>930</x>
+       <y>540</y>
+       <width>291</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Delete Recipe</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="ConfirmationOfDeleteRecipeTextBox">
+     <property name="geometry">
+      <rect>
+       <x>870</x>
+       <y>400</y>
+       <width>411</width>
+       <height>131</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>default text</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignmentFlag::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="SubmitUpdateRecipe">
+     <property name="geometry">
+      <rect>
+       <x>550</x>
+       <y>540</y>
+       <width>291</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Update Recipe</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="ConfirmationOfUpdateRecipeTextBox">
+     <property name="geometry">
+      <rect>
+       <x>490</x>
+       <y>400</y>
+       <width>411</width>
+       <height>131</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>default text</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignmentFlag::AlignCenter</set>
+     </property>
+    </widget>
    </widget>
   </widget>
   <widget class="QPlainTextEdit" name="noteBox">
@@ -1287,6 +1553,9 @@
      <width>1291</width>
      <height>201</height>
     </rect>
+   </property>
+   <property name="plainText">
+    <string>Notes--</string>
    </property>
   </widget>
  </widget>
@@ -1379,8 +1648,8 @@
    <slot>SubmitNewItemToDatabase()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>711</x>
-     <y>760</y>
+     <x>381</x>
+     <y>595</y>
     </hint>
     <hint type="destinationlabel">
      <x>1294</x>
@@ -1443,28 +1712,12 @@
    <slot>submitNewCustomerToDatabase()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>713</x>
-     <y>719</y>
+     <x>413</x>
+     <y>599</y>
     </hint>
     <hint type="destinationlabel">
      <x>1294</x>
      <y>616</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>CustomerID</sender>
-   <signal>textChanged(QString)</signal>
-   <receiver>MainWindow</receiver>
-   <slot>setNewJobDetails()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>424</x>
-     <y>83</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>1294</x>
-     <y>33</y>
     </hint>
    </hints>
   </connection>
@@ -1731,8 +1984,8 @@
    <slot>submitNewJobToDatabase()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>688</x>
-     <y>747</y>
+     <x>388</x>
+     <y>587</y>
     </hint>
     <hint type="destinationlabel">
      <x>1294</x>
@@ -2019,12 +2272,188 @@
    <slot>submitNewRecipeToDatabase()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>732</x>
-     <y>749</y>
+     <x>432</x>
+     <y>589</y>
     </hint>
     <hint type="destinationlabel">
      <x>1294</x>
      <y>588</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CustomerID</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>setNewJobDetails()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>424</x>
+     <y>83</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1294</x>
+     <y>33</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>SubmitUpdateItem</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>submitEditItem()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1156</x>
+     <y>297</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1420</x>
+     <y>295</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>UpdateCustomerID</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>setNewCustomerDetails()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1220</x>
+     <y>113</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1417</x>
+     <y>115</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>SubmitUpdateCustomer</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>submitEditCustomer()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1208</x>
+     <y>305</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1447</x>
+     <y>279</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>UpdateJobNumber</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>setNewJobDetails()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1160</x>
+     <y>109</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1444</x>
+     <y>96</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>deleteWorkOrderNumber</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>setNewJobDetails()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1205</x>
+     <y>398</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1425</x>
+     <y>382</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>SubmitUpdateJob</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>submitEditJob()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1143</x>
+     <y>306</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1442</x>
+     <y>314</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>SubmitDeleteWorkOrder</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>submitDeleteWorkOrder()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1184</x>
+     <y>582</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1348</x>
+     <y>577</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>SubmitUpdateRecipe</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>submitEditRecipe()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>811</x>
+     <y>605</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1317</x>
+     <y>645</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>SubmitDeleteRecipe</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>SubmitDeleteRecipe()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1103</x>
+     <y>603</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1347</x>
+     <y>697</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>itemNumber</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>SetNewItemDetails()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1212</x>
+     <y>108</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1433</x>
+     <y>46</y>
     </hint>
    </hints>
   </connection>
@@ -2039,5 +2468,11 @@
   <slot>submitNewJobToDatabase()</slot>
   <slot>setNewRecipeDetails()</slot>
   <slot>submitNewRecipeToDatabase()</slot>
+  <slot>submitEditItem()</slot>
+  <slot>submitEditCustomer()</slot>
+  <slot>submitEditJob()</slot>
+  <slot>submitDeleteWorkOrder()</slot>
+  <slot>submitEditRecipe()</slot>
+  <slot>SubmitDeleteRecipe()</slot>
  </slots>
 </ui>

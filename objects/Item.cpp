@@ -10,3 +10,11 @@ string Item::getSQLInsert() {
 		itemName + "', '" + itemDescription + "', " + to_string(itemValue) + ", " + to_string(itemQuantity) + ", " + to_string(isRawResource) + ")";
 	return query;
 }
+
+string Item::getSQLUpdate() {
+	string query = "Update Item set itemName = '" + itemName +
+		"', itemDescription = '" + itemDescription + "', itemValue = " + to_string(itemValue) +
+		", itemQuantity = " + to_string(itemQuantity) + ", ResourceCode = " + to_string(isRawResource) +
+			" where itemID = " + to_string(itemID);
+	return query;
+}

@@ -10,3 +10,10 @@ string Customer::getSQLInsert() {
 	query += "'" + customerName + "', '" + customerAddress + "', '" + customerPhone + "')" ;
 	return query;
 }
+string Customer::getSQLUpdate() {
+	string query = "UPDATE customer set customerName = '" + customerName +
+				"', customerAddress = '" + customerAddress +
+				"', customerPhone = " + customerPhone +
+				" where customerID = " + to_string(customerID);
+	return query;
+}

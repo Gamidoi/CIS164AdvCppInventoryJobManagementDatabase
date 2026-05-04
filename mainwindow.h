@@ -10,6 +10,7 @@
 
 #include "objects/Customer.h"
 #include "objects/Item.h"
+#include "objects/Job.h"
 #include "util/sqlConnection.h"
 
 
@@ -33,16 +34,22 @@ private slots:
 	void SetNewItemDetails();
 	void SubmitNewItemToDatabase();
 	void PopulateViewItemsTable();
+	void submitEditItem();
 	void setNewCustomerDetails();
 	void submitNewCustomerToDatabase();
 	void PopulateViewCustomersTable();
+	void submitEditCustomer();
 	void setNewJobDetails();
 	void submitNewJobToDatabase();
 	void PopulateViewJobsTable();
+	void submitEditJob();
+	void submitDeleteWorkOrder();
 	void PopulateViewWorkOrdersTable();
 	void setNewRecipeDetails();
 	void submitNewRecipeToDatabase();
 	void PopulateViewRecipesTable();
+	void submitEditRecipe();
+	void SubmitDeleteRecipe();
 private:
 	Ui::MainWindow *ui;
 	shared_ptr<sqlConnection> database;
@@ -53,6 +60,8 @@ private:
 	shared_ptr<QSqlQueryModel> viewRecipes;
 	Item newItem;
 	Customer newCustomer;
+	Job newJob;
+	Recipe newRecipe;
 };
 
 

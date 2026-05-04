@@ -11,6 +11,9 @@ using namespace std;
 class Job {
 private:
     int customerID;
+    int jobID;
+    int workOrderID;
+
     int productID1;
     int quantity1;
     int productID2;
@@ -35,8 +38,12 @@ public:
     }
     string getSQLInsert();
     string getSQLWorkOrderInsert(string JobNumber);
+    string getSQLUpdate();
+    string getSQLWorkOrderDelete();
 
     void setCustomerID(int id) {customerID = id;}
+    void setJobID(int id) {jobID = id;}
+    void setWorkOrderID(int id) {workOrderID = id;}
     void setProductID1(int id) {productID1 = id;}
     void setProductID2(int id) {productID2 = id;}
     void setProductID3(int id) {productID3 = id;}
@@ -55,6 +62,8 @@ public:
     void setQuantity8(int quantity) {quantity8 = quantity;}
 
     int getCustomerID() {return customerID;}
+    int getJobID() {return jobID;}
+    int getWorkOrderID() {return workOrderID;}
     int getProductID1() {return productID1;}
     int getProductID2() {return productID2;}
     int getProductID3() {return productID3;}

@@ -11,6 +11,8 @@
 #include <iostream>
 #include "../objects/Item.h"
 #include "../objects/Customer.h"
+#include "../objects/Job.h"
+#include "../objects/Recipe.h"
 using namespace std;
 
 
@@ -26,7 +28,15 @@ public:
 		return database.open();
 	}
 	string insertItem(Item newItem);
+	string updateItem(Item newItem);
 	string insertCustomer(Customer newCustomer);
+	string UpdateCustomer(Customer newCustomer);
+	string insertJob(Job newJob);
+	string updateJob(Job newJob);
+	string deleteWorkOrder(Job newJob);
+	string insertRecipe(Recipe newRecipe);
+	string updateRecipe(Recipe newRecipe);
+	string deleteRecipe(Recipe newRecipe);
 };
 
 
